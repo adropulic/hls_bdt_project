@@ -15,7 +15,7 @@ import sys, os
 #THIS ONE IS CORRECT PLACE
 # Import ROOT classes
 from ROOT import gSystem, gROOT, gApplication, TFile, TTree, TCut
-inputFile_VBF = ROOT.TFile.Open("/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/l1TNtuple-VBF_restrictedeta_062420_reta3p2.root","READ")
+inputFile_VBF = ROOT.TFile.Open("/afs/cern.ch/work/a/addropul/l1TNtuple-VBF_restrictedeta_062420_reta3p2.root","READ")
 signal = inputFile_VBF.Get("l1NtupleProducer/Stage3Regions/efficiencyTree")
 if( not signal ):
 	print("Error, could not get input tree")
@@ -129,7 +129,7 @@ print("=== TMVAClassification is done!\n")
 # Create a conifer config
 cfg = conifer.backends.vivadohls.auto_config()
 # Set the output directory to something unique
-cfg['OutputDir'] = 'prj_{}'.format(int(071320))
+cfg['OutputDir'] = 'prj_{}'.format(int(0713203))
 
 # Create and compile the model
 model = conifer.model(ET.parse('./dataset/weights/TMVAClassification_BDT.weights.xml'), conifer.converters.tmva, conifer.backends.vivadohls, cfg)
@@ -140,7 +140,7 @@ X = np.load('/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Nt
 print(np.shape(X))
 # Run HLS C Simulation and get the output
 y_hls = model.decision_function(X)
-y_skl = clf.decision_function(X)
+#y_skl = clf.decision_function(X)
 
 # Synthesize the model
 model.build()
