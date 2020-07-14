@@ -1,0 +1,103 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /data/tools/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/data/tools/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'addropul' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-957.12.2.el7.x86_64) on Mon Jul 13 20:41:23 EDT 2020
+INFO: [HLS 200-10] On os "CentOS Linux release 7.8.2003 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138'
+INFO: [HLS 200-10] Creating and opening project '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/BDT.h' to the project
+INFO: [HLS 200-10] Adding design file 'firmware/my_prj.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'my_prj_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Creating and opening solution '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution1'.
+INFO: [HLS 200-10] Opening and resetting solution '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2L-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../my_prj_test.cpp in debug mode
+   Compiling ../../../../firmware/my_prj.cpp in debug mode
+   Generating csim.exe
+Processing input 0
+Quantized predictions
+-0.119141 0 
+Processing input 5000
+Quantized predictions
+-0.19043 0 
+Processing input 10000
+Quantized predictions
+-0.121094 0 
+Processing input 15000
+Quantized predictions
+-0.251953 0 
+Processing input 20000
+Quantized predictions
+-0.0263672 0 
+Processing input 25000
+Quantized predictions
+-0.117188 0 
+Processing input 30000
+Quantized predictions
+-0.395508 0 
+Processing input 35000
+Quantized predictions
+-0.162109 0 
+Processing input 40000
+Quantized predictions
+-0.1875 0 
+Processing input 45000
+Quantized predictions
+-0.225586 0 
+Processing input 50000
+Quantized predictions
+-0.138672 0 
+Processing input 55000
+Quantized predictions
+-0.306641 0 
+Processing input 60000
+Quantized predictions
+-0.212891 0 
+Processing input 65000
+Quantized predictions
+-0.305664 0 
+Processing input 70000
+Quantized predictions
+0.0107422 0 
+Processing input 75000
+Quantized predictions
+-0.231445 0 
+Processing input 80000
+Quantized predictions
+-0.373047 0 
+Processing input 85000
+Quantized predictions
+0.0078125 0 
+Processing input 90000
+Quantized predictions
+-0.306641 0 
+Processing input 95000
+Quantized predictions
+-0.0712891 0 
+Processing input 100000
+Quantized predictions
+-0.219727 0 
+Processing input 105000
+Quantized predictions
+-0.186523 0 
+Processing input 110000
+Quantized predictions
+-0.165039 0 
+Processing input 115000
+Quantized predictions
+-0.363281 0 
+Processing input 120000
+INFO: Saved inference results to file: tb_data/csim_results.log
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Mon Jul 13 20:53:03 2020...

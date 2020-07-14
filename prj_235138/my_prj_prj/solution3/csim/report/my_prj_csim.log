@@ -1,0 +1,81 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../my_prj_test.cpp in debug mode
+   Compiling ../../../../firmware/my_prj.cpp in debug mode
+   Generating csim.exe
+Processing input 0
+Quantized predictions
+-0.119141 0 
+Processing input 5000
+Quantized predictions
+-0.19043 0 
+Processing input 10000
+Quantized predictions
+-0.121094 0 
+Processing input 15000
+Quantized predictions
+-0.251953 0 
+Processing input 20000
+Quantized predictions
+-0.0263672 0 
+Processing input 25000
+Quantized predictions
+-0.117188 0 
+Processing input 30000
+Quantized predictions
+-0.395508 0 
+Processing input 35000
+Quantized predictions
+-0.162109 0 
+Processing input 40000
+Quantized predictions
+-0.1875 0 
+Processing input 45000
+Quantized predictions
+-0.225586 0 
+Processing input 50000
+Quantized predictions
+-0.138672 0 
+Processing input 55000
+Quantized predictions
+-0.306641 0 
+Processing input 60000
+Quantized predictions
+-0.212891 0 
+Processing input 65000
+Quantized predictions
+-0.305664 0 
+Processing input 70000
+Quantized predictions
+0.0107422 0 
+Processing input 75000
+Quantized predictions
+-0.231445 0 
+Processing input 80000
+Quantized predictions
+-0.373047 0 
+Processing input 85000
+Quantized predictions
+0.0078125 0 
+Processing input 90000
+Quantized predictions
+-0.306641 0 
+Processing input 95000
+Quantized predictions
+-0.0712891 0 
+Processing input 100000
+Quantized predictions
+-0.219727 0 
+Processing input 105000
+Quantized predictions
+-0.186523 0 
+Processing input 110000
+Quantized predictions
+-0.165039 0 
+Processing input 115000
+Quantized predictions
+-0.363281 0 
+Processing input 120000
+INFO: Saved inference results to file: tb_data/csim_results.log
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
