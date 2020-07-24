@@ -1,0 +1,133 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /data/tools/Xilinx/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/data/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'addropul' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-957.12.2.el7.x86_64) on Fri Jul 24 12:22:55 EDT 2020
+INFO: [HLS 200-10] On os "CentOS Linux release 7.8.2003 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_239749'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-10] Opening project '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_239749/my_prj_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/BDT.h' to the project
+INFO: [HLS 200-10] Adding design file 'firmware/my_prj.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'my_prj_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Opening solution '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_239749/my_prj_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2L-e'
+INFO: [HLS 200-10] Opening and resetting solution '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_239749/my_prj_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/my_prj.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 879.473 ; gain = 192.207 ; free physical = 13564 ; free virtual = 43378
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 879.473 ; gain = 192.207 ; free physical = 13564 ; free virtual = 43378
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 879.473 ; gain = 192.207 ; free physical = 13554 ; free virtual = 43371
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'BDT::fn_classes' into 'BDT::BDT<4, 3, 2, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' (firmware/BDT.h:119) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 879.473 ; gain = 192.207 ; free physical = 13549 ; free virtual = 43367
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'BDT::BDT<4, 3, 2, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' (firmware/BDT.h:117).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'BDT::Tree<3, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' (firmware/BDT.h:38).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/BDT.h:119) in function 'BDT::BDT<4, 3, 2, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Trees' (firmware/BDT.h:123) in function 'BDT::BDT<4, 3, 2, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Classes' (firmware/BDT.h:125) in function 'BDT::BDT<4, 3, 2, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/BDT.h:131) in function 'BDT::BDT<4, 3, 2, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Compare' (firmware/BDT.h:66) in function 'BDT::Tree<3, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' completely with a factor of 15.
+INFO: [HLS 200-489] Unrolling loop 'Activate' (firmware/BDT.h:78) in function 'BDT::Tree<3, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' completely with a factor of 15.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/BDT.h:100) in function 'BDT::Tree<3, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 'x.V' (firmware/my_prj.cpp:4) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'score.V' (firmware/my_prj.cpp:4) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.feature'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.threshold.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.value.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.children_left'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.children_right'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.parent'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'comparison' (firmware/BDT.h:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'activation' (firmware/BDT.h:56) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'activation_leaf' (firmware/BDT.h:57) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'value_leaf.V' (firmware/BDT.h:58) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.feature'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.threshold.V'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.value.V'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.children_left'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.children_right'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.parent'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.feature'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.threshold.V'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.value.V'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.children_left'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.children_right'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'bdt.trees.parent'  in dimension 3 completely.
+INFO: [XFORM 203-602] Inlining function 'BDT::BDT<4, 3, 2, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' into 'my_prj' (firmware/my_prj.cpp:9) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (firmware/BDT.h:106:2) in function 'BDT::Tree<3, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function'... converting 327 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'my_prj' (firmware/my_prj.cpp:4)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 879.473 ; gain = 192.207 ; free physical = 13503 ; free virtual = 43323
+WARNING: [XFORM 203-631] Renaming function 'BDT::Tree<3, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> [5], ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 8, (ap_q_mode)5, (ap_o_mode)3, 0> >::decision_function' to 'decision_function' (firmware/BDT.h:38)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 879.473 ; gain = 192.207 ; free physical = 13510 ; free virtual = 43331
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'my_prj' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decision_function' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'decision_function'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.54 seconds; current allocated memory: 140.660 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 145.787 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'my_prj' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'my_prj'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('tree_scores_V_addr_2_write_ln128', firmware/BDT.h:128->firmware/my_prj.cpp:9) of variable 'tmp_73_i', firmware/BDT.h:126->firmware/my_prj.cpp:9 on array 'tree_scores_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'tree_scores_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.55 seconds; current allocated memory: 147.362 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 148.673 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decision_function' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'my_prj_mux_154_1_1_0': 26 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'my_prj_mux_154_32_1_0': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'my_prj_mux_53_18_1_0': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'my_prj_mux_83_18_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decision_function'.
+INFO: [HLS 200-111]  Elapsed time: 6.47 seconds; current allocated memory: 160.633 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'my_prj' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/x_0_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/x_1_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/x_2_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/x_3_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/x_4_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/score_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/score_1_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'my_prj/tree_scores_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'my_prj' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'my_prj/score_1_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'my_prj_mul_mul_18s_11ns_28_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'my_prj'.
+INFO: [HLS 200-111]  Elapsed time: 9.14 seconds; current allocated memory: 182.609 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:01:03 . Memory (MB): peak = 943.477 ; gain = 256.211 ; free physical = 13428 ; free virtual = 43261
+INFO: [VHDL 208-304] Generating VHDL RTL for my_prj.
+INFO: [VLOG 209-307] Generating Verilog RTL for my_prj.
+INFO: [HLS 200-112] Total elapsed time: 63.44 seconds; peak allocated memory: 182.609 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Jul 24 12:23:58 2020...

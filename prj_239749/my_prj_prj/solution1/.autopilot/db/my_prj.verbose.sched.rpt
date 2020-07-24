@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vivado HLS Report for 'my_prj'
+================================================================
+* Date:           Fri Jul 24 12:23:27 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        my_prj_prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.313|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    6|    6|    2|    2| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 7, States = { 1 2 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.31>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_0_V_read = call i18 @_ssdm_op_Read.ap_auto.i18P(i18* %x_0_V)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 8 'read' 'x_0_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%x_1_V_read = call i18 @_ssdm_op_Read.ap_auto.i18P(i18* %x_1_V)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 9 'read' 'x_1_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_2_V_read = call i18 @_ssdm_op_Read.ap_auto.i18P(i18* %x_2_V)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 10 'read' 'x_2_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%x_3_V_read = call i18 @_ssdm_op_Read.ap_auto.i18P(i18* %x_3_V)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 11 'read' 'x_3_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%x_4_V_read = call i18 @_ssdm_op_Read.ap_auto.i18P(i18* %x_4_V)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 12 'read' 'x_4_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [5/5] (4.31ns)   --->   "%tmp_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 -2, i5 1, i4 4, i4 4, i18 68198, i17 10870, i18 113900, i18 74137, i18 84873, i18 66094, i11 0, i11 713, i11 0, i11 713, i11 -714, i11 0, i11 0, i11 713, i11 -714, i11 -714, i11 713, i11 713, i11 -714, i11 -714, i4 6, i4 2, i5 11, i4 5, i5 -1, i4 -1, i5 7, i5 9, i5 -1, i5 -1, i5 13, i1 true, i4 1, i3 3, i3 3, i4 0, i4 6, i4 7, i4 7, i4 6, i5 2, i5 2, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 13 'call' 'tmp_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 14 [5/5] (4.31ns)   --->   "%tmp_72_i = call fastcc i18 @decision_function(i4 0, i4 -2, i4 4, i5 4, i4 -2, i4 -2, i18 97689, i17 -62819, i18 -3762, i18 99132, i18 73201, i18 -2048, i11 479, i11 0, i11 0, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 479, i11 479, i4 2, i4 7, i5 3, i4 5, i5 -1, i4 -1, i5 9, i5 11, i5 13, i5 -1, i5 -1, i1 false, i4 2, i3 3, i3 3, i4 2, i4 1, i4 1, i4 6, i4 6, i5 7, i5 7, i5 8, i5 8, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 14 'call' 'tmp_72_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 4.31>
+ST_2 : Operation 15 [4/5] (4.31ns)   --->   "%tmp_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 -2, i5 1, i4 4, i4 4, i18 68198, i17 10870, i18 113900, i18 74137, i18 84873, i18 66094, i11 0, i11 713, i11 0, i11 713, i11 -714, i11 0, i11 0, i11 713, i11 -714, i11 -714, i11 713, i11 713, i11 -714, i11 -714, i4 6, i4 2, i5 11, i4 5, i5 -1, i4 -1, i5 7, i5 9, i5 -1, i5 -1, i5 13, i1 true, i4 1, i3 3, i3 3, i4 0, i4 6, i4 7, i4 7, i4 6, i5 2, i5 2, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 15 'call' 'tmp_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 16 [4/5] (4.31ns)   --->   "%tmp_72_i = call fastcc i18 @decision_function(i4 0, i4 -2, i4 4, i5 4, i4 -2, i4 -2, i18 97689, i17 -62819, i18 -3762, i18 99132, i18 73201, i18 -2048, i11 479, i11 0, i11 0, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 479, i11 479, i4 2, i4 7, i5 3, i4 5, i5 -1, i4 -1, i5 9, i5 11, i5 13, i5 -1, i5 -1, i1 false, i4 2, i3 3, i3 3, i4 2, i4 1, i4 1, i4 6, i4 6, i5 7, i5 7, i5 8, i5 8, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 16 'call' 'tmp_72_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [5/5] (4.31ns)   --->   "%tmp_73_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 4, i5 -2, i4 -2, i4 -2, i18 68198, i17 -51948, i18 -119790, i18 0, i18 84873, i18 -2048, i11 0, i11 0, i11 392, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i4 6, i4 2, i5 4, i4 -1, i5 -1, i4 7, i5 9, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 2, i3 2, i3 1, i4 0, i4 5, i4 5, i4 6, i4 6, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 17 'call' 'tmp_73_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 18 [5/5] (4.31ns)   --->   "%tmp_74_i = call fastcc i18 @decision_function(i4 2, i4 2, i4 -2, i5 -2, i4 -2, i4 -2, i18 5443, i17 -4722, i18 -1334, i18 -6109, i18 -2048, i18 -2048, i11 0, i11 318, i11 -319, i11 -319, i11 318, i11 318, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i4 1, i4 3, i5 5, i4 7, i5 9, i4 -1, i5 -1, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 1, i3 0, i3 2, i4 2, i4 3, i4 3, i4 4, i4 4, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 18 'call' 'tmp_74_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 4.31>
+ST_3 : Operation 19 [3/5] (4.31ns)   --->   "%tmp_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 -2, i5 1, i4 4, i4 4, i18 68198, i17 10870, i18 113900, i18 74137, i18 84873, i18 66094, i11 0, i11 713, i11 0, i11 713, i11 -714, i11 0, i11 0, i11 713, i11 -714, i11 -714, i11 713, i11 713, i11 -714, i11 -714, i4 6, i4 2, i5 11, i4 5, i5 -1, i4 -1, i5 7, i5 9, i5 -1, i5 -1, i5 13, i1 true, i4 1, i3 3, i3 3, i4 0, i4 6, i4 7, i4 7, i4 6, i5 2, i5 2, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 19 'call' 'tmp_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 20 [3/5] (4.31ns)   --->   "%tmp_72_i = call fastcc i18 @decision_function(i4 0, i4 -2, i4 4, i5 4, i4 -2, i4 -2, i18 97689, i17 -62819, i18 -3762, i18 99132, i18 73201, i18 -2048, i11 479, i11 0, i11 0, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 479, i11 479, i4 2, i4 7, i5 3, i4 5, i5 -1, i4 -1, i5 9, i5 11, i5 13, i5 -1, i5 -1, i1 false, i4 2, i3 3, i3 3, i4 2, i4 1, i4 1, i4 6, i4 6, i5 7, i5 7, i5 8, i5 8, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 20 'call' 'tmp_72_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 21 [4/5] (4.31ns)   --->   "%tmp_73_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 4, i5 -2, i4 -2, i4 -2, i18 68198, i17 -51948, i18 -119790, i18 0, i18 84873, i18 -2048, i11 0, i11 0, i11 392, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i4 6, i4 2, i5 4, i4 -1, i5 -1, i4 7, i5 9, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 2, i3 2, i3 1, i4 0, i4 5, i4 5, i4 6, i4 6, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 21 'call' 'tmp_73_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 22 [4/5] (4.31ns)   --->   "%tmp_74_i = call fastcc i18 @decision_function(i4 2, i4 2, i4 -2, i5 -2, i4 -2, i4 -2, i18 5443, i17 -4722, i18 -1334, i18 -6109, i18 -2048, i18 -2048, i11 0, i11 318, i11 -319, i11 -319, i11 318, i11 318, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i4 1, i4 3, i5 5, i4 7, i5 9, i4 -1, i5 -1, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 1, i3 0, i3 2, i4 2, i4 3, i4 3, i4 4, i4 4, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 22 'call' 'tmp_74_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 4.31>
+ST_4 : Operation 23 [2/5] (4.31ns)   --->   "%tmp_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 -2, i5 1, i4 4, i4 4, i18 68198, i17 10870, i18 113900, i18 74137, i18 84873, i18 66094, i11 0, i11 713, i11 0, i11 713, i11 -714, i11 0, i11 0, i11 713, i11 -714, i11 -714, i11 713, i11 713, i11 -714, i11 -714, i4 6, i4 2, i5 11, i4 5, i5 -1, i4 -1, i5 7, i5 9, i5 -1, i5 -1, i5 13, i1 true, i4 1, i3 3, i3 3, i4 0, i4 6, i4 7, i4 7, i4 6, i5 2, i5 2, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 23 'call' 'tmp_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 24 [2/5] (4.31ns)   --->   "%tmp_72_i = call fastcc i18 @decision_function(i4 0, i4 -2, i4 4, i5 4, i4 -2, i4 -2, i18 97689, i17 -62819, i18 -3762, i18 99132, i18 73201, i18 -2048, i11 479, i11 0, i11 0, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 479, i11 479, i4 2, i4 7, i5 3, i4 5, i5 -1, i4 -1, i5 9, i5 11, i5 13, i5 -1, i5 -1, i1 false, i4 2, i3 3, i3 3, i4 2, i4 1, i4 1, i4 6, i4 6, i5 7, i5 7, i5 8, i5 8, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 24 'call' 'tmp_72_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 25 [3/5] (4.31ns)   --->   "%tmp_73_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 4, i5 -2, i4 -2, i4 -2, i18 68198, i17 -51948, i18 -119790, i18 0, i18 84873, i18 -2048, i11 0, i11 0, i11 392, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i4 6, i4 2, i5 4, i4 -1, i5 -1, i4 7, i5 9, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 2, i3 2, i3 1, i4 0, i4 5, i4 5, i4 6, i4 6, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 25 'call' 'tmp_73_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 26 [3/5] (4.31ns)   --->   "%tmp_74_i = call fastcc i18 @decision_function(i4 2, i4 2, i4 -2, i5 -2, i4 -2, i4 -2, i18 5443, i17 -4722, i18 -1334, i18 -6109, i18 -2048, i18 -2048, i11 0, i11 318, i11 -319, i11 -319, i11 318, i11 318, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i4 1, i4 3, i5 5, i4 7, i5 9, i4 -1, i5 -1, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 1, i3 0, i3 2, i4 2, i4 3, i4 3, i4 4, i4 4, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 26 'call' 'tmp_74_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 4.31>
+ST_5 : Operation 27 [1/5] (3.15ns)   --->   "%tmp_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 -2, i5 1, i4 4, i4 4, i18 68198, i17 10870, i18 113900, i18 74137, i18 84873, i18 66094, i11 0, i11 713, i11 0, i11 713, i11 -714, i11 0, i11 0, i11 713, i11 -714, i11 -714, i11 713, i11 713, i11 -714, i11 -714, i4 6, i4 2, i5 11, i4 5, i5 -1, i4 -1, i5 7, i5 9, i5 -1, i5 -1, i5 13, i1 true, i4 1, i3 3, i3 3, i4 0, i4 6, i4 7, i4 7, i4 6, i5 2, i5 2, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 27 'call' 'tmp_i' <Predicate = true> <Delay = 3.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 28 [1/5] (3.15ns)   --->   "%tmp_72_i = call fastcc i18 @decision_function(i4 0, i4 -2, i4 4, i5 4, i4 -2, i4 -2, i18 97689, i17 -62819, i18 -3762, i18 99132, i18 73201, i18 -2048, i11 479, i11 0, i11 0, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 -480, i11 -480, i11 479, i11 479, i11 479, i11 479, i4 2, i4 7, i5 3, i4 5, i5 -1, i4 -1, i5 9, i5 11, i5 13, i5 -1, i5 -1, i1 false, i4 2, i3 3, i3 3, i4 2, i4 1, i4 1, i4 6, i4 6, i5 7, i5 7, i5 8, i5 8, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 28 'call' 'tmp_72_i' <Predicate = true> <Delay = 3.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 29 [2/5] (4.31ns)   --->   "%tmp_73_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 4, i5 -2, i4 -2, i4 -2, i18 68198, i17 -51948, i18 -119790, i18 0, i18 84873, i18 -2048, i11 0, i11 0, i11 392, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i4 6, i4 2, i5 4, i4 -1, i5 -1, i4 7, i5 9, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 2, i3 2, i3 1, i4 0, i4 5, i4 5, i4 6, i4 6, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 29 'call' 'tmp_73_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 30 [2/5] (4.31ns)   --->   "%tmp_74_i = call fastcc i18 @decision_function(i4 2, i4 2, i4 -2, i5 -2, i4 -2, i4 -2, i18 5443, i17 -4722, i18 -1334, i18 -6109, i18 -2048, i18 -2048, i11 0, i11 318, i11 -319, i11 -319, i11 318, i11 318, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i4 1, i4 3, i5 5, i4 7, i5 9, i4 -1, i5 -1, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 1, i3 0, i3 2, i4 2, i4 3, i4 3, i4 4, i4 4, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 30 'call' 'tmp_74_i' <Predicate = true> <Delay = 4.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 3.15>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%tree_scores_V_addr = getelementptr [4 x i18]* %tree_scores_V, i64 0, i64 0" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 31 'getelementptr' 'tree_scores_V_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.59ns)   --->   "store i18 %tmp_i, i18* %tree_scores_V_addr, align 4" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 32 'store' <Predicate = true> <Delay = 0.59> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 4> <RAM>
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%tree_scores_V_addr_1 = getelementptr [4 x i18]* %tree_scores_V, i64 0, i64 1" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 33 'getelementptr' 'tree_scores_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.59ns)   --->   "store i18 %tmp_72_i, i18* %tree_scores_V_addr_1, align 4" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 34 'store' <Predicate = true> <Delay = 0.59> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 4> <RAM>
+ST_6 : Operation 35 [1/5] (3.15ns)   --->   "%tmp_73_i = call fastcc i18 @decision_function(i4 0, i4 4, i4 4, i5 -2, i4 -2, i4 -2, i18 68198, i17 -51948, i18 -119790, i18 0, i18 84873, i18 -2048, i11 0, i11 0, i11 392, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i11 -393, i4 6, i4 2, i5 4, i4 -1, i5 -1, i4 7, i5 9, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 2, i3 2, i3 1, i4 0, i4 5, i4 5, i4 6, i4 6, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 35 'call' 'tmp_73_i' <Predicate = true> <Delay = 3.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 36 [1/5] (3.15ns)   --->   "%tmp_74_i = call fastcc i18 @decision_function(i4 2, i4 2, i4 -2, i5 -2, i4 -2, i4 -2, i18 5443, i17 -4722, i18 -1334, i18 -6109, i18 -2048, i18 -2048, i11 0, i11 318, i11 -319, i11 -319, i11 318, i11 318, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i11 -319, i4 1, i4 3, i5 5, i4 7, i5 9, i4 -1, i5 -1, i5 -1, i5 -1, i5 11, i5 13, i1 true, i4 1, i3 0, i3 2, i4 2, i4 3, i4 3, i4 4, i4 4, i5 9, i5 9, i5 10, i5 10, i18 %x_0_V_read, i18 %x_1_V_read, i18 %x_2_V_read, i18 %x_3_V_read, i18 %x_4_V_read)" [firmware/BDT.h:126->firmware/my_prj.cpp:9]   --->   Operation 36 'call' 'tmp_74_i' <Predicate = true> <Delay = 3.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 3.79>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %score_1_V), !map !83"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %score_0_V), !map !89"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %x_4_V), !map !95"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %x_3_V), !map !101"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %x_2_V), !map !107"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %x_1_V), !map !113"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i18* %x_0_V), !map !117"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4 x i18]* %tree_scores_V), !map !121"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @my_prj_str) nounwind"   --->   Operation 45 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [firmware/my_prj.cpp:7]   --->   Operation 46 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%tree_scores_V_addr_2 = getelementptr [4 x i18]* %tree_scores_V, i64 0, i64 2" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 47 'getelementptr' 'tree_scores_V_addr_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.59ns)   --->   "store i18 %tmp_73_i, i18* %tree_scores_V_addr_2, align 4" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 48 'store' <Predicate = true> <Delay = 0.59> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 4> <RAM>
+ST_7 : Operation 49 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln703 = add i18 %tmp_i, %tmp_72_i" [firmware/BDT.h:127->firmware/my_prj.cpp:9]   --->   Operation 49 'add' 'add_ln703' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 50 [1/1] (0.58ns)   --->   "%add_ln703_1 = add i18 %tmp_73_i, %tmp_74_i" [firmware/BDT.h:127->firmware/my_prj.cpp:9]   --->   Operation 50 'add' 'add_ln703_1' <Predicate = true> <Delay = 0.58> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 51 [1/1] (0.68ns) (root node of TernaryAdder)   --->   "%add_ln703_2 = add i18 %add_ln703_1, %add_ln703" [firmware/BDT.h:127->firmware/my_prj.cpp:9]   --->   Operation 51 'add' 'add_ln703_2' <Predicate = true> <Delay = 0.68> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%tree_scores_V_addr_3 = getelementptr [4 x i18]* %tree_scores_V, i64 0, i64 3" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 52 'getelementptr' 'tree_scores_V_addr_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 53 [1/1] (0.59ns)   --->   "store i18 %tmp_74_i, i18* %tree_scores_V_addr_3, align 4" [firmware/BDT.h:128->firmware/my_prj.cpp:9]   --->   Operation 53 'store' <Predicate = true> <Delay = 0.59> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 4> <RAM>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%sext_ln1118 = sext i18 %add_ln703_2 to i28" [firmware/BDT.h:132->firmware/my_prj.cpp:9]   --->   Operation 54 'sext' 'sext_ln1118' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (2.53ns) (root node of the DSP)   --->   "%mul_ln1118 = mul i28 %sext_ln1118, 550" [firmware/BDT.h:132->firmware/my_prj.cpp:9]   --->   Operation 55 'mul' 'mul_ln1118' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln = call i18 @_ssdm_op_PartSelect.i18.i28.i32.i32(i28 %mul_ln1118, i32 10, i32 27)" [firmware/BDT.h:132->firmware/my_prj.cpp:9]   --->   Operation 56 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i18P(i18* %score_0_V, i18 %trunc_ln)" [firmware/my_prj.cpp:9]   --->   Operation 57 'write' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "ret void" [firmware/my_prj.cpp:10]   --->   Operation 58 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 4.31ns
+The critical path consists of the following:
+	wire read on port 'x_0_V' (firmware/BDT.h:126->firmware/my_prj.cpp:9) [19]  (0 ns)
+	'call' operation ('tmp_i', firmware/BDT.h:126->firmware/my_prj.cpp:9) to 'decision_function' [24]  (4.31 ns)
+
+ <State 2>: 4.31ns
+The critical path consists of the following:
+	'call' operation ('tmp_i', firmware/BDT.h:126->firmware/my_prj.cpp:9) to 'decision_function' [24]  (4.31 ns)
+
+ <State 3>: 4.31ns
+The critical path consists of the following:
+	'call' operation ('tmp_i', firmware/BDT.h:126->firmware/my_prj.cpp:9) to 'decision_function' [24]  (4.31 ns)
+
+ <State 4>: 4.31ns
+The critical path consists of the following:
+	'call' operation ('tmp_i', firmware/BDT.h:126->firmware/my_prj.cpp:9) to 'decision_function' [24]  (4.31 ns)
+
+ <State 5>: 4.31ns
+The critical path consists of the following:
+	'call' operation ('tmp_73_i', firmware/BDT.h:126->firmware/my_prj.cpp:9) to 'decision_function' [30]  (4.31 ns)
+
+ <State 6>: 3.16ns
+The critical path consists of the following:
+	'call' operation ('tmp_73_i', firmware/BDT.h:126->firmware/my_prj.cpp:9) to 'decision_function' [30]  (3.16 ns)
+
+ <State 7>: 3.8ns
+The critical path consists of the following:
+	'add' operation ('add_ln703_1', firmware/BDT.h:127->firmware/my_prj.cpp:9) [35]  (0.582 ns)
+	'add' operation ('add_ln703_2', firmware/BDT.h:127->firmware/my_prj.cpp:9) [36]  (0.682 ns)
+	'mul' operation of DSP[40] ('mul_ln1118', firmware/BDT.h:132->firmware/my_prj.cpp:9) [40]  (2.53 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
