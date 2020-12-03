@@ -226,8 +226,8 @@ def auto_config():
     config = {'ProjectName' : 'my_prj',
               'OutputDir'   : 'my-conifer-prj',
               'Precision'   : 'ap_fixed<18,8>',
-              'XilinxPart' : 'xcvu9p-flgb2104-2L-e',
-              'ClockPeriod' : '5'}
+              'XilinxPart' : 'xc7vx690tffg1927-2',#xcvu9p-flgb2104-2L-e',
+              'ClockPeriod' : '8.33'}
     return config
 
 def decision_function(X, config, trees=False):
