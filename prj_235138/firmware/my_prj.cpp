@@ -2,6 +2,7 @@
 #include "parameters.h"
 #include "my_prj.h"
 void my_prj(input_arr_t x, score_arr_t score, score_t tree_scores[BDT::fn_classes(n_classes) * n_trees]){
+	//std::cout << "about to process pragmas" << std::endl;
 	#pragma HLS array_partition variable=x
 	#pragma HLS array_partition variable=score
 	#pragma HLS pipeline

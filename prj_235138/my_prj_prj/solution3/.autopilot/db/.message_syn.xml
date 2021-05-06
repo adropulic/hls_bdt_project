@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;firmware/my_prj.cpp&apos; ..."/>
-	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="0  libLLVM-3.1.so  0x00007f06cb12b02f
-1  libLLVM-3.1.so  0x00007f06cb12b344
-2  libpthread.so.0 0x00007f06ca236630
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="0  libLLVM-3.1.so  0x00007ff3196f002f
+1  libLLVM-3.1.so  0x00007ff3196f0344
+2  libpthread.so.0 0x00007ff3187fb630
 3  clang           0x0000000000b75360 clang::LocalInstantiationScope::getPartiallySubstitutedPack(clang::TemplateArgument const**, unsigned int*) const + 32
 4  clang           0x0000000000ba4378 clang::Sema::CheckParameterPacksForExpansion(clang::SourceLocation, clang::SourceRange, llvm::ArrayRef&lt;std::pair&lt;llvm::PointerUnion&lt;clang::TemplateTypeParmType const*, clang::NamedDecl*&gt;, clang::SourceLocation&gt; &gt;, clang::MultiLevelTemplateArgumentList const&amp;, bool&amp;, bool&amp;, llvm::Optional&lt;unsigned int&gt;&amp;) + 264
 5  clang           0x0000000000b7b5c2
@@ -36,7 +36,7 @@
 32 clang           0x00000000005bd2d3 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) + 1827
 33 clang           0x00000000005b3ee1 cc1_main(char const**, char const**, char const*, void*) + 737
 34 clang           0x00000000005b11c5 main + 597
-35 libc.so.6       0x00007f06c93e1555 __libc_start_main + 245
+35 libc.so.6       0x00007ff3179a6555 __libc_start_main + 245
 36 clang           0x00000000005b3989
 Stack dump:
 0.	Program arguments: /data/tools/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -disable-free -disable-llvm-verifier -main-file-name my_prj.pp.0.cpp -mrelocation-model static -mdisable-fp-elim -masm-verbose -mconstructor-aliases -hls -munwind-tables -target-cpu x86-64 -target-linker-version 2.26.20160125 -momit-leaf-frame-pointer -coverage-file /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution3/.autopilot/db/useless.bc -resource-dir /data/tools/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/../lib/clang/3.1 -include etc/autopilot_ssdm_op.h -D __CLANG_3_1__ -D AESL_SYN -D __SYNTHESIS__ -D __HLS_SYN__ -D __DSP48E2__ -I /data/tools/Xilinx/Vivado/2018.2/common/technology/autopilot -I /data/tools/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -fmodule-cache-path /tmp/addropul/clang-module-cache -internal-isystem /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gcc/7.0.0-pafccj/lib/gcc/x86_64-unknown-linux-gnu/7.4.1/../../../../include/c++/7.4.1 -internal-isystem /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gcc/7.0.0-pafccj/lib/gcc/x86_64-unknown-linux-gnu/7.4.1/../../../../include/c++/7.4.1/x86_64-unknown-linux-gnu -internal-isystem /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gcc/7.0.0-pafccj/lib/gcc/x86_64-unknown-linux-gnu/7.4.1/../../../../include/c++/7.4.1/backward -internal-isystem /usr/local/include -internal-isystem /data/tools/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/../lib/clang/3.1/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O0 -std=c++0x -fdeprecated-macro -fdebug-compilation-dir /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138 -ferror-limit 19 -fmessage-length 0 -fno-limit-debug-info -mstackrealign -fno-threadsafe-statics -fno-use-cxa-atexit -fgnu-runtime -fobjc-runtime-has-arc -fobjc-runtime-has-weak -fobjc-fragile-abi -fcxx-exceptions -fexceptions -fdiagnostics-show-option -disable-llvm-optzns -o /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution3/.autopilot/db/useless.bc -x c++ /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution3/.autopilot/db/my_prj.pp.0.cpp 
@@ -46,11 +46,11 @@ clang: error: unable to execute command: Segmentation fault
 clang: error: clang frontend command failed due to signal (use -v to see invocation)
 clang: note: diagnostic msg: Please submit a bug report to http://llvm.org/bugs/ and include command line arguments and all diagnostic information.
 clang: note: diagnostic msg: Preprocessed source(s) and associated run script(s) are located at:
-clang: note: diagnostic msg: /tmp/addropul/my_prj-6OXCxH.ii
-clang: note: diagnostic msg: /tmp/addropul/my_prj-6OXCxH.sh\n"/>
-	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: Pragma processor failed: 0  libLLVM-3.1.so  0x00007f06cb12b02f
-1  libLLVM-3.1.so  0x00007f06cb12b344
-2  libpthread.so.0 0x00007f06ca236630
+clang: note: diagnostic msg: /tmp/addropul/my_prj-5d2cfM.ii
+clang: note: diagnostic msg: /tmp/addropul/my_prj-5d2cfM.sh\n"/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: Pragma processor failed: 0  libLLVM-3.1.so  0x00007ff3196f002f
+1  libLLVM-3.1.so  0x00007ff3196f0344
+2  libpthread.so.0 0x00007ff3187fb630
 3  clang           0x0000000000b75360 clang::LocalInstantiationScope::getPartiallySubstitutedPack(clang::TemplateArgument const**, unsigned int*) const + 32
 4  clang           0x0000000000ba4378 clang::Sema::CheckParameterPacksForExpansion(clang::SourceLocation, clang::SourceRange, llvm::ArrayRef&lt;std::pair&lt;llvm::PointerUnion&lt;clang::TemplateTypeParmType const*, clang::NamedDecl*&gt;, clang::SourceLocation&gt; &gt;, clang::MultiLevelTemplateArgumentList const&amp;, bool&amp;, bool&amp;, llvm::Optional&lt;unsigned int&gt;&amp;) + 264
 5  clang           0x0000000000b7b5c2
@@ -83,7 +83,7 @@ clang: note: diagnostic msg: /tmp/addropul/my_prj-6OXCxH.sh\n"/>
 32 clang           0x00000000005bd2d3 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) + 1827
 33 clang           0x00000000005b3ee1 cc1_main(char const**, char const**, char const*, void*) + 737
 34 clang           0x00000000005b11c5 main + 597
-35 libc.so.6       0x00007f06c93e1555 __libc_start_main + 245
+35 libc.so.6       0x00007ff3179a6555 __libc_start_main + 245
 36 clang           0x00000000005b3989
 Stack dump:
 0.	Program arguments: /data/tools/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -disable-free -disable-llvm-verifier -main-file-name my_prj.pp.0.cpp -mrelocation-model static -mdisable-fp-elim -masm-verbose -mconstructor-aliases -hls -munwind-tables -target-cpu x86-64 -target-linker-version 2.26.20160125 -momit-leaf-frame-pointer -coverage-file /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution3/.autopilot/db/useless.bc -resource-dir /data/tools/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/../lib/clang/3.1 -include etc/autopilot_ssdm_op.h -D __CLANG_3_1__ -D AESL_SYN -D __SYNTHESIS__ -D __HLS_SYN__ -D __DSP48E2__ -I /data/tools/Xilinx/Vivado/2018.2/common/technology/autopilot -I /data/tools/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -fmodule-cache-path /tmp/addropul/clang-module-cache -internal-isystem /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gcc/7.0.0-pafccj/lib/gcc/x86_64-unknown-linux-gnu/7.4.1/../../../../include/c++/7.4.1 -internal-isystem /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gcc/7.0.0-pafccj/lib/gcc/x86_64-unknown-linux-gnu/7.4.1/../../../../include/c++/7.4.1/x86_64-unknown-linux-gnu -internal-isystem /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gcc/7.0.0-pafccj/lib/gcc/x86_64-unknown-linux-gnu/7.4.1/../../../../include/c++/7.4.1/backward -internal-isystem /usr/local/include -internal-isystem /data/tools/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/../lib/clang/3.1/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O0 -std=c++0x -fdeprecated-macro -fdebug-compilation-dir /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138 -ferror-limit 19 -fmessage-length 0 -fno-limit-debug-info -mstackrealign -fno-threadsafe-statics -fno-use-cxa-atexit -fgnu-runtime -fobjc-runtime-has-arc -fobjc-runtime-has-weak -fobjc-fragile-abi -fcxx-exceptions -fexceptions -fdiagnostics-show-option -disable-llvm-optzns -o /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution3/.autopilot/db/useless.bc -x c++ /afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_235138/my_prj_prj/solution3/.autopilot/db/my_prj.pp.0.cpp 
@@ -93,6 +93,6 @@ clang: error: unable to execute command: Segmentation fault
 clang: error: clang frontend command failed due to signal (use -v to see invocation)
 clang: note: diagnostic msg: Please submit a bug report to http://llvm.org/bugs/ and include command line arguments and all diagnostic information.
 clang: note: diagnostic msg: Preprocessed source(s) and associated run script(s) are located at:
-clang: note: diagnostic msg: /tmp/addropul/my_prj-6OXCxH.ii
-clang: note: diagnostic msg: /tmp/addropul/my_prj-6OXCxH.sh"/>
+clang: note: diagnostic msg: /tmp/addropul/my_prj-5d2cfM.ii
+clang: note: diagnostic msg: /tmp/addropul/my_prj-5d2cfM.sh"/>
 </Messages>

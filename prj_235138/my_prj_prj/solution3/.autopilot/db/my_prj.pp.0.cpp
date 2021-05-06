@@ -36357,7 +36357,7 @@ public:
  int parent[n_nodes];
 
  score_t decision_function(input_t x) const{
-#pragma HLS pipeline II = 6
+#pragma HLS pipeline II = 1
 #pragma HLS ARRAY_PARTITION variable=feature
 #pragma HLS ARRAY_PARTITION variable=threshold
 #pragma HLS ARRAY_PARTITION variable=value
@@ -36428,8 +36428,8 @@ public:
  Tree<max_depth, input_t, score_t, threshold_t> trees[n_trees][fn_classes(n_classes)];
 
  void decision_function(input_t x, score_t score[fn_classes(n_classes)], score_t tree_scores[fn_classes(n_classes) * n_trees]) const{
-#pragma HLS ARRAY_PARTITION variable=trees dim=2
- for(int j = 0; j < fn_classes(n_classes); j++){
+
+  for(int j = 0; j < fn_classes(n_classes); j++){
    score[j] = init_predict[j];
   }
   Trees:
@@ -44996,6 +44996,7 @@ void my_prj(
  score_t tree_scores[BDT::fn_classes(n_classes) * n_trees]);
 # 4 "firmware/my_prj.cpp" 2
 void my_prj(input_arr_t x, score_arr_t score, score_t tree_scores[BDT::fn_classes(n_classes) * n_trees]){
+
 #pragma HLS array_partition variable=x
 #pragma HLS array_partition variable=score
 #pragma HLS pipeline
