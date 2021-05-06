@@ -1,0 +1,218 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /data/tools/Xilinx/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/data/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'addropul' on host 'uwlogin.cern.ch' (Linux_x86_64 version 3.10.0-1127.10.1.el7.x86_64) on Wed Apr 28 21:26:25 EDT 2021
+INFO: [HLS 200-10] On os "CentOS Linux release 7.8.2003 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_144013'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-10] Creating and opening project '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_144013/my_prj_prj'.
+INFO: [HLS 200-10] Adding design file 'firmware/BDT.h' to the project
+INFO: [HLS 200-10] Adding design file 'firmware/my_prj.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'my_prj_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-10] Creating and opening solution '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_144013/my_prj_prj/solution1'.
+INFO: [HLS 200-10] Opening and resetting solution '/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/conifer/prj_144013/my_prj_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7vx690t-ffg1927-2'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8.33ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../my_prj_test.cpp in debug mode
+   Compiling ../../../../firmware/my_prj.cpp in debug mode
+   Generating csim.exe
+Processing input 0
+Quantized predictions
+-0.117188 0 
+Processing input 5000
+Quantized predictions
+0.163086 0 
+Processing input 10000
+Quantized predictions
+-0.287109 0 
+Processing input 15000
+Quantized predictions
+-0.237305 0 
+Processing input 20000
+Quantized predictions
+-0.177734 0 
+Processing input 25000
+Quantized predictions
+-0.329102 0 
+Processing input 30000
+Quantized predictions
+-0.160156 0 
+Processing input 35000
+Quantized predictions
+-0.0478516 0 
+Processing input 40000
+Quantized predictions
+0.0400391 0 
+Processing input 45000
+Quantized predictions
+-0.295898 0 
+Processing input 50000
+Quantized predictions
+-0.102539 0 
+Processing input 55000
+Quantized predictions
+0.143555 0 
+Processing input 60000
+Quantized predictions
+-0.331055 0 
+Processing input 65000
+Quantized predictions
+-0.192383 0 
+Processing input 70000
+Quantized predictions
+-0.0419922 0 
+Processing input 75000
+Quantized predictions
+-0.24707 0 
+Processing input 80000
+Quantized predictions
+-0.256836 0 
+Processing input 85000
+Quantized predictions
+-0.189453 0 
+Processing input 90000
+Quantized predictions
+-0.114258 0 
+Processing input 95000
+Quantized predictions
+0.0830078 0 
+Processing input 100000
+Quantized predictions
+-0.475586 0 
+Processing input 105000
+Quantized predictions
+-0.545898 0 
+Processing input 110000
+Quantized predictions
+-0.368164 0 
+Processing input 115000
+Quantized predictions
+-0.291016 0 
+Processing input 120000
+Quantized predictions
+-0.304688 0 
+Processing input 125000
+Quantized predictions
+-0.410156 0 
+Processing input 130000
+Quantized predictions
+-0.378906 0 
+Processing input 135000
+Quantized predictions
+-0.509766 0 
+Processing input 140000
+Quantized predictions
+-0.0898438 0 
+Processing input 145000
+Quantized predictions
+-0.3125 0 
+Processing input 150000
+Quantized predictions
+-0.375977 0 
+Processing input 155000
+Quantized predictions
+-0.310547 0 
+Processing input 160000
+Quantized predictions
+-0.448242 0 
+Processing input 165000
+Quantized predictions
+-0.205078 0 
+Processing input 170000
+Quantized predictions
+-0.231445 0 
+Processing input 175000
+Quantized predictions
+-0.37207 0 
+Processing input 180000
+Quantized predictions
+-0.0966797 0 
+Processing input 185000
+Quantized predictions
+0.609375 0 
+Processing input 190000
+Quantized predictions
+-0.404297 0 
+Processing input 195000
+Quantized predictions
+-0.658203 0 
+Processing input 200000
+Quantized predictions
+-0.304688 0 
+Processing input 205000
+Quantized predictions
+-0.12793 0 
+Processing input 210000
+Quantized predictions
+-0.166016 0 
+Processing input 215000
+Quantized predictions
+-0.506836 0 
+Processing input 220000
+Quantized predictions
+-0.43457 0 
+Processing input 225000
+Quantized predictions
+-0.430664 0 
+Processing input 230000
+Quantized predictions
+-0.415039 0 
+Processing input 235000
+Quantized predictions
+0.0908203 0 
+Processing input 240000
+Quantized predictions
+-0.34668 0 
+Processing input 245000
+Quantized predictions
+-0.306641 0 
+Processing input 250000
+Quantized predictions
+-0.0576172 0 
+Processing input 255000
+Quantized predictions
+-0.197266 0 
+Processing input 260000
+Quantized predictions
+-0.134766 0 
+Processing input 265000
+Quantized predictions
+-0.452148 0 
+Processing input 270000
+Quantized predictions
+-0.424805 0 
+Processing input 275000
+Quantized predictions
+-0.293945 0 
+Processing input 280000
+Quantized predictions
+-0.401367 0 
+Processing input 285000
+Quantized predictions
+-0.136719 0 
+Processing input 290000
+Quantized predictions
+-0.580078 0 
+Processing input 295000
+Quantized predictions
+-0.373047 0 
+Processing input 300000
+Quantized predictions
+-0.456055 0 
+Processing input 305000
+Quantized predictions
+-0.195313 0 
+Processing input 310000
+INFO: Saved inference results to file: tb_data/csim_results.log
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Wed Apr 28 21:29:56 2021...

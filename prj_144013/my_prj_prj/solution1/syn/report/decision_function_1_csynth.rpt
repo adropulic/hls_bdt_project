@@ -1,0 +1,354 @@
+
+
+================================================================
+== Vivado HLS Report for 'decision_function_1'
+================================================================
+* Date:           Wed Apr 28 21:31:01 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        my_prj_prj
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx690t-ffg1927-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.33|     7.229|        1.04|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |   30|   30|   25|   25| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+-------------------+-----+-----+-----+-----+----------+
+        |                               |                   |  Latency  |  Interval | Pipeline |
+        |            Instance           |       Module      | min | max | min | max |   Type   |
+        +-------------------------------+-------------------+-----+-----+-----+-----+----------+
+        |grp_decision_function_fu_1369  |decision_function  |    4|    4|    1|    1| function |
+        |grp_decision_function_fu_1509  |decision_function  |    4|    4|    1|    1| function |
+        +-------------------------------+-------------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      1|       -|       -|    -|
+|Expression       |        -|      -|       0|     619|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        0|      -|    3962|   16010|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|    6501|    -|
+|Register         |        -|      -|     477|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      1|    4439|   23130|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     2940|   3600|  866400|  433200|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|   ~0  |   ~0   |       5|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+-------------------+---------+-------+------+------+-----+
+    |            Instance           |       Module      | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +-------------------------------+-------------------+---------+-------+------+------+-----+
+    |grp_decision_function_fu_1369  |decision_function  |        0|      0|  1981|  8005|    0|
+    |grp_decision_function_fu_1509  |decision_function  |        0|      0|  1981|  8005|    0|
+    +-------------------------------+-------------------+---------+-------+------+------+-----+
+    |Total                          |                   |        0|      0|  3962| 16010|    0|
+    +-------------------------------+-------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    +------------------------------------+-------------------------------+-----------+
+    |              Instance              |             Module            | Expression|
+    +------------------------------------+-------------------------------+-----------+
+    |my_prj_mul_mul_18s_9ns_27_1_1_U126  |my_prj_mul_mul_18s_9ns_27_1_1  |  i0 * i1  |
+    +------------------------------------+-------------------------------+-----------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |add_ln703_10_fu_2718_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_14_fu_2735_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_15_fu_2740_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_20_fu_2723_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_21_fu_2729_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_22_fu_2746_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_23_fu_2751_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_27_fu_2756_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_28_fu_2761_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_29_fu_2766_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_30_fu_2772_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_33_fu_2777_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_34_fu_2782_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_38_fu_2787_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_39_fu_2792_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_3_fu_2694_p2     |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_44_fu_2798_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_45_fu_2804_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_46_fu_2809_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_47_fu_2814_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_48_fu_2818_p2    |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_4_fu_2700_p2     |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_8_fu_2706_p2     |     +    |      0|  0|  18|          18|          18|
+    |add_ln703_9_fu_2712_p2     |     +    |      0|  0|  18|          18|          18|
+    |grp_fu_2617_p2             |     +    |      0|  0|  25|          18|          18|
+    |grp_fu_2623_p2             |     +    |      0|  0|  18|          18|          18|
+    |grp_fu_2644_p2             |     +    |      0|  0|  18|          18|          18|
+    |grp_fu_2650_p2             |     +    |      0|  0|  18|          18|          18|
+    |grp_fu_2656_p2             |     +    |      0|  0|  25|          18|          18|
+    |grp_fu_2662_p2             |     +    |      0|  0|  18|          18|          18|
+    |grp_fu_2668_p2             |     +    |      0|  0|  18|          18|          18|
+    |grp_fu_2674_p2             |     +    |      0|  0|  25|          18|          18|
+    |grp_fu_2680_p2             |     +    |      0|  0|  18|          18|          18|
+    |ap_block_pp0_stage0_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_enable_pp0              |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0| 619|         596|         597|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------------------------------------------------------------------------------------+-----+-----------+-----+-----------+
+    |                                                           Name                                                           | LUT | Input Size| Bits| Total Bits|
+    +--------------------------------------------------------------------------------------------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                                                                                                                 |  121|         26|    1|         26|
+    |ap_enable_reg_pp0_iter0                                                                                                   |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                                                                                                   |    9|          2|    1|          2|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_0_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_0_feature_read         |   33|          6|    4|         24|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_0_threshold_V_read     |   53|         12|   18|        216|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_children_left_read  |   21|          4|    5|         20|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_feature_read        |   21|          4|    3|         12|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_parent_read         |   38|          7|    5|         35|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_threshold_V_read    |   38|          7|   17|        119|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_value_V_read        |  117|         25|   10|        250|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_11_parent_read         |   38|          7|    5|         35|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_11_value_V_read        |  121|         26|   10|        260|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_children_left_read  |   15|          3|    5|         15|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_parent_read         |   41|          8|    5|         40|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_threshold_V_read    |   27|          5|   16|         80|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_value_V_read        |  121|         26|   10|        260|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_13_parent_read         |   38|          7|    5|         35|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_13_value_V_read        |  121|         26|   10|        260|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_14_parent_read         |   38|          7|    5|         35|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_14_value_V_read        |  121|         26|   10|        260|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_feature_read         |   38|          7|    4|         28|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_threshold_V_read     |   89|         18|   18|        324|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_value_V_read         |   44|          9|    9|         81|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_children_left_read   |   41|          8|    5|         40|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_feature_read         |   38|          7|    4|         28|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_parent_read          |   15|          3|    1|          3|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_threshold_V_read     |  101|         21|   18|        378|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_value_V_read         |   56|         13|   11|        143|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_feature_read         |   38|          7|    4|         28|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_parent_read          |   15|          3|    3|          9|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_threshold_V_read     |   62|         15|   18|        270|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_value_V_read         |   53|         12|   10|        120|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_children_left_read   |   21|          4|    5|         20|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_feature_read         |   21|          4|    3|         12|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_parent_read          |   21|          4|    3|         12|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_threshold_V_read     |   27|          5|   18|         90|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_value_V_read         |  113|         24|   10|        240|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_feature_read         |   27|          5|    3|         15|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_parent_read          |   21|          4|    4|         16|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_threshold_V_read     |   47|         10|   18|        180|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_value_V_read         |  101|         21|   11|        231|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_children_left_read   |   38|          7|    5|         35|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_feature_read         |   33|          6|    4|         24|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_parent_read          |   27|          5|    4|         20|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_threshold_V_read     |   85|         17|   18|        306|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_value_V_read         |   65|         16|   10|        160|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_children_left_read   |   27|          5|    5|         25|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_feature_read         |   27|          5|    4|         20|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_parent_read          |   27|          5|    4|         20|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_threshold_V_read     |   47|         10|   18|        180|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_value_V_read         |   97|         20|   10|        200|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_children_left_read   |   27|          5|    5|         25|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_feature_read         |   21|          4|    4|         16|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_parent_read          |   41|          8|    5|         40|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_threshold_V_read     |   47|         10|   18|        180|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_value_V_read         |  113|         24|   11|        264|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_children_left_read   |   21|          4|    5|         20|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_feature_read         |   21|          4|    3|         12|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_parent_read          |   38|          7|    5|         35|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_threshold_V_read     |   33|          6|   17|        102|
+    |grp_decision_function_fu_1369_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_value_V_read         |  113|         24|   11|        264|
+    |grp_decision_function_fu_1369_x_0_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1369_x_1_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1369_x_2_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1369_x_3_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1369_x_4_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_0_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_0_feature_read         |   27|          5|    4|         20|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_0_threshold_V_read     |   50|         11|   18|        198|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_children_left_read  |   15|          3|    5|         15|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_parent_read         |   38|          7|    5|         35|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_threshold_V_read    |   33|          6|   17|        102|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_10_value_V_read        |  113|         24|   10|        240|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_11_parent_read         |   33|          6|    5|         30|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_11_value_V_read        |  109|         23|   10|        230|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_children_left_read  |   15|          3|    5|         15|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_feature_read        |   15|          3|    3|          9|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_parent_read         |   38|          7|    5|         35|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_threshold_V_read    |   38|          7|   16|        112|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_12_value_V_read        |  109|         23|   10|        230|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_13_parent_read         |   21|          4|    5|         20|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_13_value_V_read        |  113|         24|   10|        240|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_14_parent_read         |   21|          4|    5|         20|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_14_value_V_read        |  113|         24|   10|        240|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_feature_read         |   38|          7|    4|         28|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_threshold_V_read     |   62|         15|   18|        270|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_1_value_V_read         |   38|          7|    9|         63|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_feature_read         |   38|          7|    4|         28|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_parent_read          |   15|          3|    1|          3|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_threshold_V_read     |  105|         22|   18|        396|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_2_value_V_read         |   50|         11|   11|        121|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_feature_read         |   33|          6|    4|         24|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_parent_read          |   15|          3|    3|          9|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_threshold_V_read     |   59|         14|   18|        252|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_3_value_V_read         |   65|         16|   10|        160|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_children_left_read   |   21|          4|    5|         20|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_feature_read         |   21|          4|    3|         12|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_parent_read          |   21|          4|    3|         12|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_threshold_V_read     |   33|          6|   18|        108|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_4_value_V_read         |  101|         21|   10|        210|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_children_left_read   |   27|          5|    5|         25|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_feature_read         |   33|          6|    3|         18|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_parent_read          |   21|          4|    4|         16|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_threshold_V_read     |   62|         15|   18|        270|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_5_value_V_read         |   62|         15|   11|        165|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_feature_read         |   27|          5|    4|         20|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_parent_read          |   27|          5|    4|         20|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_threshold_V_read     |   53|         12|   18|        216|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_6_value_V_read         |   65|         16|   10|        160|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_children_left_read   |   27|          5|    5|         25|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_feature_read         |   38|          7|    4|         28|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_parent_read          |   21|          4|    4|         16|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_threshold_V_read     |   47|         10|   18|        180|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_7_value_V_read         |   89|         18|   10|        180|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_children_left_read   |   33|          6|    5|         30|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_feature_read         |   33|          6|    4|         24|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_parent_read          |   38|          7|    5|         35|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_threshold_V_read     |   59|         14|   18|        252|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_8_value_V_read         |   93|         19|   11|        209|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_children_left_read   |   21|          4|    5|         20|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_feature_read         |   27|          5|    3|         15|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_parent_read          |   38|          7|    5|         35|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_threshold_V_read     |   44|          9|   17|        153|
+    |grp_decision_function_fu_1509_Tree_3_ap_fixed_18_8_5_3_0_5_ap_fixed_18_8_5_3_0_ap_fixed_18_8_5_3_0_9_value_V_read         |   97|         20|   11|        220|
+    |grp_decision_function_fu_1509_x_0_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1509_x_1_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1509_x_2_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1509_x_3_V_read                                                                                  |   15|          3|   18|         54|
+    |grp_decision_function_fu_1509_x_4_V_read                                                                                  |   15|          3|   18|         54|
+    |tree_scores_V_address0                                                                                                    |  121|         26|    6|        156|
+    |tree_scores_V_address1                                                                                                    |  121|         26|    6|        156|
+    |tree_scores_V_d0                                                                                                          |   15|          3|   18|         54|
+    |tree_scores_V_d1                                                                                                          |   21|          4|   18|         72|
+    +--------------------------------------------------------------------------------------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                                                                                                     | 6501|       1333| 1249|      13289|
+    +--------------------------------------------------------------------------------------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |add_ln703_10_reg_2878        |  18|   0|   18|          0|
+    |add_ln703_13_reg_2883        |  18|   0|   18|          0|
+    |add_ln703_21_reg_2888        |  18|   0|   18|          0|
+    |add_ln703_23_reg_2908        |  18|   0|   18|          0|
+    |add_ln703_25_reg_2893        |  18|   0|   18|          0|
+    |add_ln703_26_reg_2898        |  18|   0|   18|          0|
+    |add_ln703_28_reg_2913        |  18|   0|   18|          0|
+    |add_ln703_30_reg_2923        |  18|   0|   18|          0|
+    |add_ln703_34_reg_2928        |  18|   0|   18|          0|
+    |add_ln703_37_reg_2903        |  18|   0|   18|          0|
+    |add_ln703_39_reg_2933        |  18|   0|   18|          0|
+    |add_ln703_41_reg_2938        |  18|   0|   18|          0|
+    |add_ln703_46_reg_2943        |  18|   0|   18|          0|
+    |add_ln703_4_reg_2873         |  18|   0|   18|          0|
+    |ap_CS_fsm                    |  25|   0|   25|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |reg_2629                     |  18|   0|   18|          0|
+    |reg_2634                     |  18|   0|   18|          0|
+    |reg_2639                     |  18|   0|   18|          0|
+    |reg_2686                     |  18|   0|   18|          0|
+    |reg_2690                     |  18|   0|   18|          0|
+    |tmp_30_reg_2918              |  18|   0|   18|          0|
+    |x_0_V_read_1_reg_2867        |  18|   0|   18|          0|
+    |x_1_V_read_1_reg_2861        |  18|   0|   18|          0|
+    |x_2_V_read_1_reg_2855        |  18|   0|   18|          0|
+    |x_3_V_read_1_reg_2849        |  18|   0|   18|          0|
+    |x_4_V_read_1_reg_2843        |  18|   0|   18|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 477|   0|  477|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                  |  in |    1| ap_ctrl_hs | decision_function.1 | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | decision_function.1 | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | decision_function.1 | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | decision_function.1 | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | decision_function.1 | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | decision_function.1 | return value |
+|ap_return               | out |   17| ap_ctrl_hs | decision_function.1 | return value |
+|x_0_V_read              |  in |   18|   ap_none  |      x_0_V_read     |    scalar    |
+|x_1_V_read              |  in |   18|   ap_none  |      x_1_V_read     |    scalar    |
+|x_2_V_read              |  in |   18|   ap_none  |      x_2_V_read     |    scalar    |
+|x_3_V_read              |  in |   18|   ap_none  |      x_3_V_read     |    scalar    |
+|x_4_V_read              |  in |   18|   ap_none  |      x_4_V_read     |    scalar    |
+|tree_scores_V_address0  | out |    6|  ap_memory |    tree_scores_V    |     array    |
+|tree_scores_V_ce0       | out |    1|  ap_memory |    tree_scores_V    |     array    |
+|tree_scores_V_we0       | out |    1|  ap_memory |    tree_scores_V    |     array    |
+|tree_scores_V_d0        | out |   18|  ap_memory |    tree_scores_V    |     array    |
+|tree_scores_V_address1  | out |    6|  ap_memory |    tree_scores_V    |     array    |
+|tree_scores_V_ce1       | out |    1|  ap_memory |    tree_scores_V    |     array    |
+|tree_scores_V_we1       | out |    1|  ap_memory |    tree_scores_V    |     array    |
+|tree_scores_V_d1        | out |   18|  ap_memory |    tree_scores_V    |     array    |
++------------------------+-----+-----+------------+---------------------+--------------+
+

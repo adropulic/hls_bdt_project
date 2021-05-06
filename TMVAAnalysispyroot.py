@@ -95,7 +95,7 @@ mycutBkg = TCut( "l1Pt_1 > 0 && l1Pt_2 > 0 && l1Mass > 0" )
 dataloader.PrepareTrainingAndTestTree( mycutSig, mycutBkg,
 				"nTrain_Signal=0:nTrain_Background=0:SplitMode=Random:NormMode=NumEvents:!V" )
 #factory.BookMethod(dataloader, TMVA.Types.kBDT, "BDT","!H:!V:NTrees=10:MinNodeSize=2.5%:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5:SeparationType=GiniIndex:nCuts=20" )
-factory.BookMethod(dataloader, TMVA.Types.kBDT, "BDT", "!H:!V:NTrees=5:MinNodeSize=2.5%:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5")
+factory.BookMethod(dataloader, TMVA.Types.kBDT, "BDT", "!H:!V:NTrees=2:MinNodeSize=2.5%:MaxDepth=3:BoostType=AdaBoost:AdaBoostBeta=0.5")
 # --------------------------------------------------------------------------------------------------
 
 # ---- Now you can tell the factory to train, test, and evaluate the MVAs. 
@@ -130,7 +130,7 @@ print("=== TMVAClassification is done!\n")
 # Create a conifer config
 cfg = conifer.backends.vivadohls.auto_config()
 # Set the output directory to something unique
-cfg['OutputDir'] = 'prj_{}'.format(int(0731204))
+cfg['OutputDir'] = 'prj_{}'.format(int(0504215))
 
 # Create and compile the model
 model = conifer.model(ET.parse('./dataset/weights/TMVAClassification_BDT.weights.xml'), conifer.converters.tmva, conifer.backends.vivadohls, cfg)

@@ -12,9 +12,9 @@ import matplotlib.pyplot as plt
 
 #array = np.load('x_vbf062420_zb070520.npy')        
 #print(array)                                                                                                                                                                            
-fVBF = root.TFile.Open("/afs/cern.ch/user/a/addropul/CMSSW_10_6_0_pre4/src/L1Trigger/Run3Ntuplizer/test/l1TNtuple-VBF_restrictedeta_062420_reta3p2.root","READ")
+fVBF = root.TFile.Open("/afs/cern.ch/work/a/addropul/public/forAditya/l1TNtuple-VBF_072020_norecomatch_newbdtcuts.root","READ")
 #fVBF.Print()                                                                                                                                                                                                                               
-fZB = root.TFile.Open('/afs/cern.ch/work/a/addropul/l1TNtuple-ZeroBias-070520_newmatch.root', "READ")
+fZB = root.TFile.Open('/afs/cern.ch/work/a/addropul/public/forAditya/l1TNtuple-ZeroBias-072020_norecomatch_newbdtcut.root', "READ")
 #fZB.Print()                                                                                                                                                                                                                                
 fVBFTree = fVBF.Get("l1NtupleProducer/Stage3Regions/efficiencyTree")
 fZBTree = fZB.Get("l1NtupleProducer/Stage3Regions/efficiencyTree")
@@ -57,7 +57,7 @@ x = dataset_full.as_matrix(columns= ['l1Pt_1','l1Pt_2','l1DeltaEta','l1DeltaPhi'
 #print(x)
 y = dataset_full.as_matrix(columns= ['VBF_label'])
 
-np.save('x_vbf062420_zb070520.npy', x) 
+np.save('x_vbf072020_zb072020.npy', x) 
 #x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=42)
 #
 #
